@@ -3,7 +3,7 @@ const cors = require("cors");
 const crypto = require("crypto");
 const { MongoClient } = require("mongodb");
 
-const { MONGODB_URI, APP_PASSWORD, FRONTEND_URL, DB_NAME = "paise", PORT = 3000 } = process.env;
+const { MONGODB_URI="mongodb+srv://thestevesmith49_db_user:ZkCG2Q0XRDB43dHo@paisa.i8cyot5.mongodb.net", APP_PASSWORD="ZkCG2Q0XRDB43dHo", FRONTEND_URL, DB_NAME = "paise", PORT = 3000 } = process.env;
 if (!MONGODB_URI || !APP_PASSWORD) {
   console.error("Missing MONGODB_URI or APP_PASSWORD environment variable.");
   process.exit(1);
