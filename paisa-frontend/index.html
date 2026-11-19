@@ -80,7 +80,7 @@ const KEY="paise_v1";
 let S={tx:[],budget:0,theme:"auto"};
 try{const r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
-const API_URL="https://YOUR-RENDER-APP.onrender.com";
+const API_URL="https://paisa-expense-tracker-xh86.onrender.com/";
 let DB=false,KEYP="";try{KEYP=localStorage.getItem("paise_key")||""}catch(e){}
 async function api(path,method,body){
  const r=await fetch(API_URL+"/api"+path,{method:method||"GET",headers:{"Content-Type":"application/json","x-api-key":KEYP},body:body?JSON.stringify(body):undefined});
